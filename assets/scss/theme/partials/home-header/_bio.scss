@@ -1,0 +1,81 @@
+.home-header__bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    text-rendering: auto;
+    -webkit-font-smoothing: auto;
+
+    width: 100%;
+    flex-shrink: 0;
+
+    @media (min-width: $screen-sm-min) {
+        width: 340px;
+    }
+
+    padding: 40px;
+    background: $color-dark-bg;
+    box-sizing: border-box;
+    box-shadow: inset 20px 0 90px rgba(0, 0, 0, 0.2);
+
+    * {
+        color: white;
+    }
+
+    &__image {
+        width: 100%;
+
+        padding: 0 30px 30px 30px;
+        @media (min-width: $screen-xs-min) {
+            padding: 0 25% 30px 25%;
+        }
+        @media (min-width: $screen-sm-min) {
+            padding: 0 30px 30px 30px;
+        }
+
+        box-sizing: border-box;
+
+        img {
+            border-radius: 50%;
+            width: 100%;
+        }
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    &__description,
+    &__description a {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    a {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    a:hover {
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 1);
+        color: rgba(255, 255, 255, 1);
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @media (min-width: $screen-sm-min) {
+            justify-content: flex-end;
+        }
+        font-size: 13px;
+        span {
+            font-family: "Courier New", Courier, monospace;
+            padding: 0px 10px;
+            border-radius: 3px;
+            margin: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.2);
+        }
+    }
+}

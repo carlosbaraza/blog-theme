@@ -1,0 +1,1 @@
+{"version":3,"sources":["casper-theme-modifications.scss"],"names":[],"mappings":"AAAA,yBACI,QAAS,CACT,cAAe","file":"casper-theme-modifications.css","sourcesContent":[".site-home-header .inner {\n    margin: 0;\n    max-width: 100%;\n}\n"]}

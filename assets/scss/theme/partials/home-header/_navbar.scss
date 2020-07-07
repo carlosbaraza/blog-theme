@@ -1,0 +1,72 @@
+/* Fix the logo display when injected the inline SVG markup */
+.blog-logo svg {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    height: 38px;
+    padding: 1px 0 5px 0;
+    width: auto;
+    fill: currentColor;
+    transition: all 0.3s ease;
+}
+.blog-logo svg #gt,
+.blog-logo svg #brain {
+    transition: all 0.3s ease;
+    -webkit-transform: translateX(-780px);
+    transform: translateX(-780px);
+}
+.blog-logo svg #mind {
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+/* Fix bug with font color in the nav-bar from Author page in Casper theme */
+.home-header .author-head .main-nav.overlay a {
+    color: inherit;
+}
+.home-header .main-nav.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    border: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2) 0%,
+        transparent 100%
+    );
+
+    .blog-logo {
+        color: white;
+        img {
+            display: none;
+        }
+    }
+}
+
+/* Set the logo animation when hover */
+.main-header.with-cover,
+.main-header.with-cover a.blog-logo:hover,
+.main-header.tag-head a.blog-logo:hover {
+    color: #fff;
+}
+.blog-logo:hover svg #gt,
+.blog-logo:hover svg #brain {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+}
+.blog-logo:hover svg #mind {
+    opacity: 1;
+}
+
+@media only screen and (max-width: $screen-sm-max) {
+    .blog-logo svg {
+        padding: 4px 0;
+    }
+}
+@media only screen and (max-width: $screen-xs) {
+    .blog-logo svg {
+        height: 40px;
+    }
+}

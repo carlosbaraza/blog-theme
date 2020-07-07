@@ -1,0 +1,304 @@
+/* Big cover image on the home page */
+.main-header {
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: #222 no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.main-nav {
+    position: relative;
+    padding: 35px 40px;
+    margin: 0 0 30px 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main-header {
+    background-color: #4987b5;
+    background-image: url(/assets/img/cover.svg);
+}
+
+/* LOGO CARLOS BARAZA */
+.main-header .logo-carlosbaraza {
+    display: block;
+    max-width: 300px;
+    width: 60%;
+    @media (min-width: $screen-xs-min) {
+        width: 50%;
+    }
+    @media (min-width: $screen-sm-min) {
+        width: 40%;
+    }
+}
+.main-header .logo-carlosbaraza svg {
+    fill: currentColor;
+    transition: all 0.3s ease;
+    overflow: visible;
+}
+.main-header.with-cover .page-title {
+    display: none;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #fff;
+    margin-top: 30px;
+    font-size: 1.8em;
+    max-width: 300px;
+}
+.social-icons a {
+    text-decoration: none;
+    margin-top: 20px;
+    color: #fff;
+}
+.social-icons span {
+    padding: 0.4em;
+    border-radius: 40%;
+    transition: all 0.3s ease;
+}
+.social-icons span:hover {
+    background-color: #fff;
+    color: black;
+}
+.social-icons .socicon-twitter:hover {
+    color: #26a3d7;
+}
+.social-icons .socicon-mail:hover {
+    color: #68ed40;
+}
+.social-icons .socicon-rss:hover {
+    color: #ffaa00;
+}
+
+/* Create a bouncing scroll-down arrow on homepage with cover image */
+.scroll-down {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    bottom: 45px;
+    left: 50%;
+    margin-left: -16px;
+    width: 34px;
+    height: 34px;
+    font-size: 34px;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(255,255,255,0.7);
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-animation: bounce 4s 2s infinite;
+    animation: bounce 4s 2s infinite;
+}
+
+/* Stop it bouncing and increase contrast when hovered */
+.scroll-down:hover {
+    color: #fff;
+    -webkit-animation: none;
+    animation: none;
+}
+
+
+/* Carlos Baraza logo animation */
+.main-header .logo-carlosbaraza #logo {
+    -webkit-animation: logo-carlosbaraza-rotation 14s 2s infinite;
+    animation: logo-carlosbaraza-rotation 14s 2s infinite;
+    -webkit-transform-origin: 200px 200px 0px;
+    -moz-transform-origin: 200px 200px 0px;
+    transform-origin: 200px 200px 0px;
+}
+@-webkit-keyframes logo-carlosbaraza-rotation {
+    0% {
+        -webkit-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+    5% {
+        -webkit-transform: rotateZ(-110deg);
+        transform: rotateZ(-110deg);
+    }
+    30% {
+        -webkit-transform: rotateZ(-110deg);
+        transform: rotateZ(-110deg);
+    }
+    35% {
+        -webkit-transform: rotateZ(70deg);
+        transform: rotateZ(70deg);
+    }
+    60% {
+        -webkit-transform: rotateZ(70deg);
+        transform: rotateZ(70deg);
+    }
+    65% {
+        -webkit-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+}
+@keyframes logo-carlosbaraza-rotation {
+    0% {
+        -webkit-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+    5% {
+        -webkit-transform: rotateZ(-110deg);
+        transform: rotateZ(-110deg);
+    }
+    30% {
+        -webkit-transform: rotateZ(-110deg);
+        transform: rotateZ(-110deg);
+    }
+    35% {
+        -webkit-transform: rotateZ(70deg);
+        transform: rotateZ(70deg);
+    }
+    60% {
+        -webkit-transform: rotateZ(70deg);
+        transform: rotateZ(70deg);
+    }
+    65% {
+        -webkit-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+}
+.main-header .logo-carlosbaraza #logo-left {
+    -webkit-animation: logo-carlosbaraza-left 14s 2s infinite;
+    animation: logo-carlosbaraza-left 14s 2s infinite;
+}
+@-webkit-keyframes logo-carlosbaraza-left {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    5% {
+        -webkit-transform: translate(-15px, 41px);
+        transform: translate(-15px, 41px);
+    }
+    60% {
+        -webkit-transform: translate(-15px, 41px);
+        transform: translate(-15px, 41px);
+    }
+    65% {
+        -webkit-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+}
+@keyframes logo-carlosbaraza-left {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    5% {
+        -webkit-transform: translate(-15px, 41px);
+        transform: translate(-15px, 41px);
+    }
+    60% {
+        -webkit-transform: translate(-15px, 41px);
+        transform: translate(-15px, 41px);
+    }
+    65% {
+        -webkit-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+}
+.main-header .logo-carlosbaraza #logo-right {
+    -webkit-animation: logo-carlosbaraza-right 14s 2s infinite;
+    animation: logo-carlosbaraza-right 14s 2s infinite;
+}
+@-webkit-keyframes logo-carlosbaraza-right {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    5% {
+        -webkit-transform: translate(0px, -47px);
+        transform: translate(0px, -47px);
+    }
+    60% {
+        -webkit-transform: translate(0px, -47px);
+        transform: translate(0px, -47px);
+    }
+    65% {
+        -webkit-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+}
+@keyframes logo-carlosbaraza-right {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    5% {
+        -webkit-transform: translate(0px, -47px);
+        transform: translate(0px, -47px);
+    }
+    60% {
+        -webkit-transform: translate(0px, -47px);
+        transform: translate(0px, -47px);
+    }
+    65% {
+        -webkit-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+}
+.main-header .logo-carlosbaraza #logo-right-noweb {
+    -webkit-animation: logo-carlosbaraza-right-noweb 14s 2s infinite;
+    animation: logo-carlosbaraza-right-noweb 14s 2s infinite;
+}
+@-webkit-keyframes logo-carlosbaraza-right-noweb {
+    0% {
+        -webkit-opacity: 1;
+        opacity: 1;
+    }
+    30% {
+        -webkit-opacity: 1;
+        opacity: 1;
+    }
+    35% {
+        -webkit-opacity: 0;
+        opacity: 0;
+    }
+    60% {
+        -webkit-opacity: 0;
+        opacity: 0;
+    }
+    65% {
+        -webkit-opacity: 1;
+        opacity: 1;
+    }
+}
+@keyframes logo-carlosbaraza-right-noweb {
+    0% {
+        -webkit-opacity: 1;
+        opacity: 1;
+    }
+    30% {
+        -webkit-opacity: 1;
+        opacity: 1;
+    }
+    35% {
+        -webkit-opacity: 0;
+        opacity: 0;
+    }
+    60% {
+        -webkit-opacity: 0;
+        opacity: 0;
+    }
+    65% {
+        -webkit-opacity: 1;
+        opacity: 1;
+    }
+}

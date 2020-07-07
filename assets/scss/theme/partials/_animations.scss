@@ -1,0 +1,77 @@
+/* ==========================================================================
+     Animations
+     ========================================================================== */
+
+@-webkit-keyframes bounce-left {
+    0%,
+    10%,
+    25%,
+    40%,
+    50% {
+        -webkit-transform: translateX(-50px);
+        transform: translateX(-50px);
+    }
+    20% {
+        -webkit-transform: translateX(-60px);
+        transform: translateX(-60px);
+    }
+    30% {
+        -webkit-transform: translateX(-55px);
+        transform: translateX(-55px);
+    }
+}
+@keyframes bounce-left {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateX(-50px);
+        transform: translateX(-50px);
+    }
+    40% {
+        -webkit-transform: translateX(-60px);
+        transform: translateX(-60px);
+    }
+    60% {
+        -webkit-transform: translateX(-55px);
+        transform: translateX(-55px);
+    }
+}
+
+@-webkit-keyframes bounce-right {
+    0%,
+    10%,
+    25%,
+    40%,
+    50% {
+        -webkit-transform: translateX(50px);
+        transform: translateX(50px);
+    }
+    20% {
+        -webkit-transform: translateX(60px);
+        transform: translateX(60px);
+    }
+    30% {
+        -webkit-transform: translateX(55px);
+        transform: translateX(55px);
+    }
+}
+@keyframes bounce-right {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateX(50px);
+        transform: translateX(50px);
+    }
+    40% {
+        -webkit-transform: translateX(60px);
+        transform: translateX(60px);
+    }
+    60% {
+        -webkit-transform: translateX(55px);
+        transform: translateX(55px);
+    }
+}

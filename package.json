@@ -88,5 +88,8 @@
                 "width": 2000
             }
         }
+    },
+    "dependencies": {
+        "gulp-sass": "^4.1.0"
     }
 }
