@@ -13,7 +13,8 @@ function svgInjection() {
     SVGInjector(document.querySelectorAll('.cover img'));
     SVGInjector(document.querySelectorAll('.blog-logo img'));
     SVGInjector(document.querySelectorAll('.logo-carlosbaraza img'), {}, function(totalInjected) {
-        document.querySelector('.logo-carlosbaraza svg').style.opacity = 1;
+        var svgs = document.querySelector('.logo-carlosbaraza svg');
+        if (svgs) svgs.style.opacity = 1;
     });
 }
 

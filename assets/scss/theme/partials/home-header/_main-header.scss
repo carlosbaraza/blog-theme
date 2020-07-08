@@ -22,7 +22,7 @@
 
 .main-nav a {
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 .main-header {
@@ -87,32 +87,74 @@
 
 /* Create a bouncing scroll-down arrow on homepage with cover image */
 .scroll-down {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
     position: absolute;
     z-index: 100;
     bottom: 45px;
-    left: 50%;
-    margin-left: -16px;
-    width: 34px;
-    height: 34px;
-    font-size: 34px;
+    font-size: 16px;
+    font-weight: 700;
     text-align: center;
     text-decoration: none;
-    color: rgba(255,255,255,0.7);
-    -webkit-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    -webkit-animation: bounce 4s 2s infinite;
-    animation: bounce 4s 2s infinite;
+    color: rgba(255, 255, 255, 0.7);
+    transform: translateY(0);
+    -webkit-animation: scroll-down-bounce 4s 2s infinite;
+    animation: scroll-down-bounce 4s 2s infinite;
+    font-family: "Courier New", Courier, monospace;
+
+    &:hover {
+        color: #fff;
+        -webkit-animation: none;
+        animation: none;
+    }
+
+    .icon-arrow-left {
+        font-size: 34px;
+        -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
 }
 
-/* Stop it bouncing and increase contrast when hovered */
-.scroll-down:hover {
-    color: #fff;
-    -webkit-animation: none;
-    animation: none;
+/* Used to bounce .scroll-down on home page */
+@-webkit-keyframes scroll-down-bounce {
+    0%,
+    10%,
+    25%,
+    40%,
+    50% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    20% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    30% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
 }
-
+@keyframes scroll-down-bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    60% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+}
 
 /* Carlos Baraza logo animation */
 .main-header .logo-carlosbaraza #logo {
