@@ -1,0 +1,30 @@
+article.post-card.post.featured > a {
+    border: 8px solid #ff9f60;
+}
+
+article.post-card.post.featured .featured-label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #ff9f60;
+    color: white;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 700;
+    line-height: 1;
+    padding-top: 10px;
+
+    .icon {
+        position: relative;
+        top: -2px;
+        width: 16px;
+        max-width: 16px;
+        max-height: 16px;
+        margin-right: 6px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
